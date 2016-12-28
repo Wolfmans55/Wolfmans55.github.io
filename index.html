@@ -20,7 +20,7 @@
   </head>
   <body>
     <div class="HeadsUp">
-      <div class="HeadsUp-slider js-slider" data-currentpage="0">
+      <div class="HeadsUp-slider js-slider">
         <div class="HeadsUp-page js-page" data-page="0">
           <h2 class="HeadsUp-title">Pick A Game Mode</h2>
           <input id="quickplay" type="radio" name="game_mode" class="HeadsUp-radio js-input" data-mode="quickplay" checked>
@@ -68,7 +68,14 @@
         </div>
       </div>
 
-      <footer class="HeadsUp-footer">STEVEN GAMES COPYRIGHT 2016</footer>
+      <footer class="HeadsUp-footer">
+        <span class="HeadsUp-pagination js-pagination">
+          <span class="HeadsUp-pagination-previous js-pagination-prev" data-direction="prev" aria-label="Previous"></span>
+          <span class="HeadsUp-pagination-item HeadsUp-pagination-item--1 js-pagination-item" data-currentpage="0" aria-label="Page 1"></span>
+          <span class="HeadsUp-pagination-item HeadsUp-pagination-item--2 js-pagination-item" data-currentpage="1" aria-label="Page 2"></span>
+          <span class="HeadsUp-pagination-item HeadsUp-pagination-item--3 js-pagination-item" data-currentpage="2" aria-label="Page 3"></span>
+        </span>
+      </footer>
     </div>
     <script src="js/main.js"></script>
   </body>

@@ -84,5 +84,32 @@ h2 {
   line-height: 6em;
   text-align: center;
   font-size: 12px; }
+.HeadsUp-pagination {
+  display: none;
+  padding: 0 1em; }
+  .HeadsUp-pagination.is-active {
+    display: block; }
+  .HeadsUp-pagination-item {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 5px; }
+  .HeadsUp-pagination-previous {
+    position: absolute;
+    left: 0;
+    padding: 0 1em;
+    height: 100%;
+    width: 20%; }
+    .HeadsUp-pagination-previous:before {
+      content: '\2190';
+      font-size: 20px; }
+  .HeadsUp-pagination--1 .HeadsUp-pagination-item--1 {
+    background: #fff; }
+  .HeadsUp-pagination--2 .HeadsUp-pagination-item--2 {
+    background: #fff; }
+  .HeadsUp-pagination--3 .HeadsUp-pagination-item--3 {
+    background: #fff; }
 
 /*# sourceMappingURL=style.css.map */
