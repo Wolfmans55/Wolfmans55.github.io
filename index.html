@@ -37,34 +37,40 @@
 
         <div class="HeadsUp-page js-page" data-page="1">
           <h2 class="HeadsUp-title"># of Teams?</h2>
-          <input id="two" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="2" checked>
+          <input id="two" type="radio" name="team_count" class="HeadsUp-radio js-input" value="2" checked>
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="two">2</label>
-          <input id="three" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="3">
+          <input id="three" type="radio" name="team_count" class="HeadsUp-radio js-input" value="3">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="three">3</label>
-          <input id="four" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="4">
+          <input id="four" type="radio" name="team_count" class="HeadsUp-radio js-input" value="4">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="four">4</label>
-          <input id="five" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="5">
+          <input id="five" type="radio" name="team_count" class="HeadsUp-radio js-input" value="5">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="five">5</label>
-          <input id="six" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="6">
+          <input id="six" type="radio" name="team_count" class="HeadsUp-radio js-input" value="6">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="six">6</label>
-          <input id="seven" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="7">
+          <input id="seven" type="radio" name="team_count" class="HeadsUp-radio js-input" value="7">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="seven">7</label>
         </div>
 
         <div class="HeadsUp-page js-page" data-page="2">
           <h2 class="HeadsUp-title"># of Rounds?</h2>
-          <input id="two" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="2" checked>
-          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="two">2</label>
-          <input id="five" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="5">
-          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="five">5</label>
-          <input id="ten" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="10">
+          <input id="round_two" type="radio" name="round_count" class="HeadsUp-radio js-input" value="2" checked>
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="round_two">2</label>
+          <input id="round_five" type="radio" name="round_count" class="HeadsUp-radio js-input" value="5">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="round_five">5</label>
+          <input id="ten" type="radio" name="round_count" class="HeadsUp-radio js-input" value="10">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="ten">10</label>
-          <input id="twenty" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="20">
+          <input id="twenty" type="radio" name="round_count" class="HeadsUp-radio js-input" value="20">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="twenty">20</label>
-          <input id="thiry" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="30">
-          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="thiry">30</label>
-          <input id="forty" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="40">
+          <input id="thirty" type="radio" name="round_count" class="HeadsUp-radio js-input" value="30">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="thirty">30</label>
+          <input id="forty" type="radio" name="round_count" class="HeadsUp-radio js-input" value="40">
           <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="forty">40</label>
+        </div>
+
+        <div class="HeadsUp-page js-page" data-page="3">
+          <h2 class="HeadsUp-title">Team Names</h2>
+          <div class="js-team-names"></div>
+          <button class="HeadsUp-button js-submit-teams" type="button">Go!</button>
         </div>
       </div>
 
