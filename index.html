@@ -1,0 +1,75 @@
+<!doctype html>
+<html manifest="cache.manifest">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heads Up, Dude!</title>
+    <meta name="Heads Up, Dude!" content="iOS title">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- iPad retina portrait startup image -->
+    <link rel="apple-touch-startup-image" href="/apple-touch-startup-image-320x460.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="HeadsUp">
+      <div class="HeadsUp-slider js-slider" data-currentpage="0">
+        <div class="HeadsUp-page js-page" data-page="0">
+          <h2 class="HeadsUp-title">Pick A Game Mode</h2>
+          <input id="quickplay" type="radio" name="game_mode" class="HeadsUp-radio js-input" data-mode="quickplay" checked>
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--first" for="quickplay">
+            <p class="HeadsUp-labelButton-title">QUICK PLAY</p>
+            <p class="HeadsUp-labelButton-subtitle">ENDLESS PLAY. JUST FOR FUN!</p>
+          </label>
+          <input id="competition" type="radio" name="game_mode" class="HeadsUp-radio js-input" data-mode="competition">
+          <label class="HeadsUp-labelButton" for="competition">
+            <p class="HeadsUp-labelButton-title">COMPETITION</p>
+            <p class="HeadsUp-labelButton-subtitle">MAKE TEAMS. KEEP SCORE!</p>
+          </label>
+        </div>
+
+        <div class="HeadsUp-page js-page" data-page="1">
+          <h2 class="HeadsUp-title"># of Teams?</h2>
+          <input id="two" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="2" checked>
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="two">2</label>
+          <input id="three" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="3">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="three">3</label>
+          <input id="four" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="4">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="four">4</label>
+          <input id="five" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="5">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="five">5</label>
+          <input id="six" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="6">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="six">6</label>
+          <input id="seven" type="radio" name="team_count" class="HeadsUp-radio js-input" data-team="7">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="seven">7</label>
+        </div>
+
+        <div class="HeadsUp-page js-page" data-page="2">
+          <h2 class="HeadsUp-title"># of Rounds?</h2>
+          <input id="two" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="2" checked>
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="two">2</label>
+          <input id="five" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="5">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="five">5</label>
+          <input id="ten" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="10">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="ten">10</label>
+          <input id="twenty" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="20">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="twenty">20</label>
+          <input id="thiry" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="30">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="thiry">30</label>
+          <input id="forty" type="radio" name="round_count" class="HeadsUp-radio js-input" data-round="40">
+          <label class="HeadsUp-labelButton HeadsUp-labelButton--number" for="forty">40</label>
+        </div>
+      </div>
+
+      <footer class="HeadsUp-footer">STEVEN GAMES COPYRIGHT 2016</footer>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

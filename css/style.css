@@ -1,0 +1,88 @@
+html,
+body {
+  min-height: 100%; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(to bottom, #000822 0%, #035d82 100%);
+  padding: 1em;
+  color: #fff; }
+
+body,
+h2,
+p {
+  margin: 0; }
+
+h2 {
+  font-weight: 600; }
+
+.HeadsUp-slider {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0; }
+.HeadsUp-page {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  transition: transform .5s .2s; }
+  .HeadsUp-page--slide100 .HeadsUp-page {
+    transform: translate3d(-100%, 0, 0); }
+  .HeadsUp-page--slide200 .HeadsUp-page {
+    transform: translate3d(-200%, 0, 0); }
+  .HeadsUp-page--slide300 .HeadsUp-page {
+    transform: translate3d(-300%, 0, 0); }
+  .HeadsUp-page--slide400 .HeadsUp-page {
+    transform: translate3d(-400%, 0, 0); }
+.HeadsUp-title {
+  text-transform: uppercase;
+  color: #fff;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1em;
+  font-size: 1.75em; }
+.HeadsUp-radio {
+  display: none; }
+  .HeadsUp-radio:checked + .HeadsUp-labelButton {
+    background: #fff;
+    color: #035D82; }
+    .HeadsUp-radio:checked + .HeadsUp-labelButton:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border: 1px solid #035D82;
+      border-radius: 50px; }
+.HeadsUp-labelButton {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  padding: 20px 25px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  color: #fff; }
+  .HeadsUp-labelButton-title {
+    font-size: 1.75em;
+    font-weight: 600; }
+  .HeadsUp-labelButton-subtitle {
+    font-size: .9em; }
+  .HeadsUp-labelButton--first {
+    margin-bottom: 1em; }
+  .HeadsUp-labelButton--number {
+    width: 30%;
+    margin: 0 1.6% 1em;
+    float: left; }
+.HeadsUp-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #0D1222;
+  height: 6em;
+  line-height: 6em;
+  text-align: center;
+  font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */
