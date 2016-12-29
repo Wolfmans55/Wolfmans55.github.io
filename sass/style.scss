@@ -2,6 +2,64 @@ $blue_lt: #035D82;
 $blue_dark: #0D1222;
 $white: #fff;
 
+@-webkit-keyframes fadeyo {
+  0%   {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  99% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  100%   {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeyo {
+  0%   {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  99% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  100%   {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeyoReverse {
+  0%   {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  99% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  100%   {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeyoReverse {
+  0%   {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  99% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  100%   {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
 @mixin slideTransition {
   @for $i from 1 through 4 {
     &--slide#{$i}00 {
@@ -12,6 +70,18 @@ $white: #fff;
   }
 }
 
+.u-clearFix {
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+* {
+	box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100%;
@@ -19,7 +89,7 @@ body {
 body {
 	font-family: 'Open Sans', sans-serif;
 	background: linear-gradient(to bottom, #000822 0%,#035d82 100%);
-	padding: 1em;
+	padding: 0;
 	color: $white;
 }
 body,
@@ -33,16 +103,32 @@ h2 {
 
 .HeadsUp {
 	&-slider {
-		white-space: nowrap;
-		overflow: hidden;
-		font-size: 0;
+		// white-space: nowrap;
+		// overflow: hidden;
+		// font-size: 0;
 	}
 	&-page {
 		width: 100%;
-		display: inline-block;
-		vertical-align: top;
+		position: absolute;
+		height: 100%;
 		font-size: 16px;
 		transition: transform .5s .2s;
+		padding: 1em;
+		&:nth-child(1) {
+			left: 0;
+		}
+		&:nth-child(2) {
+			left: 100%;
+		}
+		&:nth-child(3) {
+			left: 200%;
+		}
+		&:nth-child(4) {
+			left: 300%;
+		}
+		&:nth-child(5) {
+			left: 400%;
+		}
 		@include slideTransition();
 	}
 	&-title {
@@ -72,7 +158,6 @@ h2 {
 	}
 	&-labelButton {
 		display: block;
-		box-sizing: border-box;
 		position: relative;
 		padding: 20px 25px;
 		border-radius: 50px;
@@ -100,7 +185,6 @@ h2 {
     width: 100%;
     background: transparent;
     -webkit-appearance: none;
-    box-sizing: border-box;
     padding: 20px 25px;
     border-radius: 50px;
     border: 1px solid #fff;
@@ -131,11 +215,118 @@ h2 {
     margin: 1em 0;
     border-radius: 3px;
     border: 0;
-    box-sizing: border-box;
     -webkit-appearance: none;
 	}
+	&-card {
+		width: calc(50% - 1em);
+    position: absolute;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -webkit-transition: transform .5s .3s;
+    transition: transform .5s .3s;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    overflow: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 14px;
+    -webkit-transform-origin: 50% 51%;
+    &.is-hovered {
+		  z-index: 2;
+		  -webkit-transition: transform .5s;
+    	transition: transform .5s, z-index 0 1s;
+		  .HeadsUp-card-inner {
+		  	animation: fadeyo .3s .5s forwards;
+		  	.HeadsUp-card-front {
+			    opacity: 0;
+			    transition: opacity 0s .8s;
+			  }
+			  .HeadsUp-card-back {
+			    z-index: 3;
+			    transform: rotateY(0);
+			    -webkit-filter: inherit;
+			  }
+			  .HeadsUp-card-front,
+			  .HeadsUp-card-back {
+			    &:before {
+			      border-color: transparent;
+			    }
+			  }
+		  }
+		}
+		&-body {
+			// margin: 0 -.5em;
+			overflow: auto;
+			height: calc(100% - 8.2em);
+			padding-bottom: 2em;
+			box-sizing: border-box;
+		}
+		&-inner,
+		&-front,
+		&-back {
+			height: 200px;
+		}
+		&-inner {
+			border-radius: 10px;
+			// border: 1px solid #fff;
+			// box-sizing: border-box;
+			// padding: 1em;
+			transform-style: preserve-3d;
+    	position: relative;
+    	animation: fadeyoReverse .3s 0s forwards;
+		}
+		&-front,
+		&-back {
+			width: 100%;
+	    backface-visibility: hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+			&:after {
+		    content: '';
+		    position: absolute;
+		    top: 10px;
+		    left: 10px;
+		    right: 10px;
+		    bottom: 10px;
+		    height: calc(100% - 20px);
+		    border: 8px solid white;
+		    box-sizing: border-box;
+		    border-radius: 5px;
+		    background: $blue_dark;
+		    z-index: -1; // so words sit on top
+		  }
+		  &:before {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    right: 0;
+		    border: 10px solid #0B0A09;
+		    z-index: -1; // so words sit on top
+		  }
+		}
+		&-front {
+			z-index: 2;
+	    transform: translate3d(0, 0, 0);
+	    opacity: 1;
+	    &-text {
+	    	position: absolute;
+	    	top: 50%;
+	    	left: 50%;
+	    	transform: translate(-50%, -50%);
+	    }
+		}
+		&-back {
+			transform: rotateY(180deg) translate3d(0,0,0);
+		  backface-visibility: hidden;
+		  padding: 30px;
+		  transition: transform 0s .8s, -webkit-filter 1s linear;
+		  -webkit-filter: blur(8px);
+		}
+	}
 	&-footer {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		bottom: 0;
 		width: 100%;
@@ -158,6 +349,7 @@ h2 {
 			border: 1px solid #fff;
 			border-radius: 50%;
 			margin: 0 5px;
+			transition: background .5s .2s;
 		}
 		&-previous {
 			position: absolute;
@@ -185,5 +377,30 @@ h2 {
 				background: #fff;
 			}
 		}
+		&--4 {
+			.HeadsUp-pagination-item--4 {
+				background: #fff;
+			}
+		}
 	}
+}
+
+$elements: 15;
+@for $i from 1 to $elements {
+  @if $i % 2 == 0 {
+    $x: 100%;
+    $y: (($i - 2)/2) * 100%;
+
+    .HeadsUp-card:nth-child(#{$i}) {
+      -webkit-transform: translate3d($x, $y, 0);
+      transform: translate3d($x, $y, 0);
+    }
+  } @else {
+    $x: 0;
+    $y: ($i - 1)/2 * 100%;
+    .HeadsUp-card:nth-child(#{$i}) {
+      -webkit-transform: translate3d($x, $y, 0);
+      transform: translate3d($x, $y, 0);
+    }
+  }
 }
