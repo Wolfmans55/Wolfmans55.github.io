@@ -227,7 +227,6 @@ h2 {
       bottom: 0;
       left: 0;
       right: 0;
-      border: 10px solid #0B0A09;
       z-index: -1; }
   .HeadsUp-card-front {
     z-index: 2;
