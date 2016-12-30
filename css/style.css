@@ -86,12 +86,16 @@ h2 {
   .HeadsUp-page:nth-child(5) {
     left: 400%; }
   .HeadsUp-page--slide100 .HeadsUp-page {
+    -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0); }
   .HeadsUp-page--slide200 .HeadsUp-page {
+    -webkit-transform: translate3d(-200%, 0, 0);
     transform: translate3d(-200%, 0, 0); }
   .HeadsUp-page--slide300 .HeadsUp-page {
+    -webkit-transform: translate3d(-300%, 0, 0);
     transform: translate3d(-300%, 0, 0); }
   .HeadsUp-page--slide400 .HeadsUp-page {
+    -webkit-transform: translate3d(-400%, 0, 0);
     transform: translate3d(-400%, 0, 0); }
 .HeadsUp-title {
   text-transform: uppercase;
@@ -177,7 +181,8 @@ h2 {
   overflow: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
   font-size: 14px;
-  -webkit-transform-origin: 50% 51%; }
+  -webkit-transform-origin: 50% 51%;
+  transform-origin: 50% 51%; }
   .HeadsUp-card.is-hovered {
     z-index: 2;
     -webkit-transition: transform .5s;
@@ -189,6 +194,7 @@ h2 {
         transition: opacity 0s .5s; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-back {
         z-index: 4;
+        -webkit-transform: rotateY(0);
         transform: rotateY(0);
         -webkit-filter: inherit; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-front:before,
@@ -203,11 +209,13 @@ h2 {
     height: 200px; }
   .HeadsUp-card-inner {
     border-radius: 10px;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     position: relative;
     animation: fadeyoReverse .3s 0s forwards; }
   .HeadsUp-card-front, .HeadsUp-card-back {
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -235,23 +243,29 @@ h2 {
       z-index: 2; }
   .HeadsUp-card-front {
     z-index: 2;
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     opacity: 1; }
     .HeadsUp-card-front-text {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-50%, -50%, 0);
       z-index: 3; }
   .HeadsUp-card-back {
+    -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
     transform: rotateY(180deg) translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     padding: 30px;
     transition: transform 0s .8s, -webkit-filter 1s linear;
     -webkit-filter: blur(8px); }
     .HeadsUp-card-back-text {
       position: relative;
-      z-index: 3; }
+      z-index: 3;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
 .HeadsUp-footer {
   position: absolute;
   left: 0;
@@ -263,6 +277,7 @@ h2 {
   text-align: center;
   font-size: 12px;
   z-index: 99999;
+  -webkit-transform: translateZ(1px);
   transform: translateZ(1px); }
 .HeadsUp-pagination {
   display: none;
