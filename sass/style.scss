@@ -240,6 +240,7 @@ h2 {
 		  -webkit-transition: transform .5s;
     	transition: transform .5s;
 		  .HeadsUp-card-inner {
+		  	-webkit-animation: fadeyo .3s .5s forwards;
 		  	animation: fadeyo .3s .5s forwards;
 		  	.HeadsUp-card-front {
 			    opacity: 0;
@@ -279,6 +280,7 @@ h2 {
 			-webkit-transform-style: preserve-3d;
 			transform-style: preserve-3d;
     	position: relative;
+    	-webkit-animation: fadeyoReverse .3s 0s forwards;
     	animation: fadeyoReverse .3s 0s forwards;
 		}
 		&-front,
