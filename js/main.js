@@ -26,8 +26,8 @@ function switchPage() {
   // Show/Hide the pagination
   showPagination(direction);
 
-  // Slide animation and pagination updates
-  currentPage.classList.remove('HeadsUp-page--slide' + currentPageNum - direction + '00');
+  // Slide animation updates
+  currentPage.classList.remove('HeadsUp-page--slide' + (currentPageNum - direction) + '00');
   currentPage.classList.add('HeadsUp-page--slide' + currentPageNum + '00');
 
   // Disable buttons when page is not active
@@ -39,8 +39,7 @@ function switchPage() {
 
 function showPagination(direction) {
   var pagination = document.querySelector('.js-pagination');
-
-  pagination.classList.remove('HeadsUp-pagination--' + currentPageNum - direction);
+  pagination.classList.remove('HeadsUp-pagination--' + (currentPageNum - direction));
   pagination.classList.add('HeadsUp-pagination--' + currentPageNum);
 
   // Logic to show the pagination

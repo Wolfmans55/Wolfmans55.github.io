@@ -48,13 +48,15 @@
 
 html,
 body {
-  min-height: 100%; }
+  min-height: 100%;
+  overflow: hidden; }
 
 body {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to bottom, #000822 0%, #035d82 100%);
   padding: 0;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
 
 body,
 h2,
@@ -64,6 +66,8 @@ p {
 h2 {
   font-weight: 600; }
 
+.HeadsUp-slider {
+  overflow: hidden; }
 .HeadsUp-page {
   width: 100%;
   position: absolute;
@@ -140,6 +144,19 @@ h2 {
   color: #fff;
   margin-top: 1em;
   cursor: pointer; }
+  .HeadsUp-button:focus, .HeadsUp-button:active {
+    outline: none;
+    background: #fff;
+    color: #035D82; }
+    .HeadsUp-button:focus:after, .HeadsUp-button:active:after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border: 1px solid #035D82;
+      border-radius: 50px; }
 .HeadsUp-input {
   display: block;
   width: 100%;
@@ -232,7 +249,7 @@ h2 {
     transition: transform 0s .8s, -webkit-filter 1s linear;
     -webkit-filter: blur(8px); }
 .HeadsUp-footer {
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -240,7 +257,9 @@ h2 {
   height: 6em;
   line-height: 6em;
   text-align: center;
-  font-size: 12px; }
+  font-size: 12px;
+  z-index: 99999;
+  transform: translateZ(1px); }
 .HeadsUp-pagination {
   display: none;
   padding: 0 1em; }
