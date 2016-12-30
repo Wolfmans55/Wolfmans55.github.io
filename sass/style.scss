@@ -241,10 +241,10 @@ h2 {
 		  	animation: fadeyo .3s .5s forwards;
 		  	.HeadsUp-card-front {
 			    opacity: 0;
-			    transition: opacity 0s .8s;
+			    transition: opacity 0s .5s;
 			  }
 			  .HeadsUp-card-back {
-			    z-index: 3;
+			    z-index: 4;
 			    transform: rotateY(0);
 			    -webkit-filter: inherit;
 			  }

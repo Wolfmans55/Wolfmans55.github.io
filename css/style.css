@@ -186,9 +186,9 @@ h2 {
       animation: fadeyo .3s .5s forwards; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-front {
         opacity: 0;
-        transition: opacity 0s .8s; }
+        transition: opacity 0s .5s; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-back {
-        z-index: 3;
+        z-index: 4;
         transform: rotateY(0);
         -webkit-filter: inherit; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-front:before,
