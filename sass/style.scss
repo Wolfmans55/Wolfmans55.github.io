@@ -328,10 +328,7 @@ h2 {
 		  transition: transform 0s .8s, -webkit-filter 1s linear;
 		  -webkit-filter: blur(8px);
 		  &-text {
-	    	position: absolute;
-	    	top: 50%;
-	    	left: 50%;
-	    	transform: translate(-50%, -50%);
+	    	position: relative;
 	    	z-index: 3;
 	    }
 		}
