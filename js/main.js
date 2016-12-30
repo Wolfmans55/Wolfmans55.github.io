@@ -108,8 +108,8 @@ function selectACategory(e) {
       }
     })
 
-    var windowWidth = window.outerWidth;
-    var windowHeight = window.outerHeight;
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
     var windowTop = document.querySelector('body').scrollTop;
     var cardWidth = windowWidth / 2;
     var cardHeight = 200;
