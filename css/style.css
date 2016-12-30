@@ -223,14 +223,16 @@ h2 {
       border: 8px solid white;
       box-sizing: border-box;
       border-radius: 5px;
-      background: #0D1222; }
+      background: #0D1222;
+      z-index: 2; }
     .HeadsUp-card-front:before, .HeadsUp-card-back:before {
       content: '';
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
-      right: 0; }
+      right: 0;
+      z-index: 2; }
   .HeadsUp-card-front {
     z-index: 2;
     transform: translate3d(0, 0, 0);
@@ -239,13 +241,20 @@ h2 {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      z-index: 3; }
   .HeadsUp-card-back {
     transform: rotateY(180deg) translate3d(0, 0, 0);
     backface-visibility: hidden;
     padding: 30px;
     transition: transform 0s .8s, -webkit-filter 1s linear;
     -webkit-filter: blur(8px); }
+    .HeadsUp-card-back-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3; }
 .HeadsUp-footer {
   position: absolute;
   left: 0;

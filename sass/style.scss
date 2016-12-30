@@ -296,7 +296,7 @@ h2 {
 		    box-sizing: border-box;
 		    border-radius: 5px;
 		    background: $blue_dark;
-		    // z-index: -1; // so words sit on top
+		    z-index: 2; // so words sit on top
 		  }
 		  &:before {
 		    content: '';
@@ -306,7 +306,7 @@ h2 {
 		    left: 0;
 		    right: 0;
 		    // border: 10px solid #0B0A09;
-		    // z-index: -1; // so words sit on top
+		    z-index: 2; // so words sit on top
 		  }
 		}
 		&-front {
@@ -318,6 +318,7 @@ h2 {
 	    	top: 50%;
 	    	left: 50%;
 	    	transform: translate(-50%, -50%);
+	    	z-index: 3;
 	    }
 		}
 		&-back {
@@ -326,6 +327,13 @@ h2 {
 		  padding: 30px;
 		  transition: transform 0s .8s, -webkit-filter 1s linear;
 		  -webkit-filter: blur(8px);
+		  &-text {
+	    	position: absolute;
+	    	top: 50%;
+	    	left: 50%;
+	    	transform: translate(-50%, -50%);
+	    	z-index: 3;
+	    }
 		}
 	}
 	&-footer {
