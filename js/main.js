@@ -117,6 +117,8 @@ function selectACategory(e) {
     var x = (windowWidth / 2) - (cardWidth / 2) - bodyPadding;
     var y = (windowHeight / 2) + windowTop - (cardHeight / 2) - 100;
 
+    alert('window width:' + windowWidth + ' window height:' + windowHeight + ' window top:' + windowTop + ' card width:' + cardWidth + ' card height:' + cardHeight);
+
     if (!e.currentTarget.classList.contains('is-hovered')) {
       e.currentTarget.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(2)';
     } else {
