@@ -120,12 +120,13 @@ function selectACategory(e) {
     // alert('window width:' + windowWidth + ' window height:' + windowHeight + ' window top:' + windowTop + ' card width:' + cardWidth + ' card height:' + cardHeight);
 
     if (!e.currentTarget.classList.contains('is-hovered')) {
-      e.currentTarget.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(2)';
+      // e.currentTarget.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(2)';
+      e.currentTarget.style.cssText = '-webkit-transform: translate3d(' + x + 'px, ' + y + 'px, 0) scale(2);';
     } else {
       e.currentTarget.removeAttribute('style');
     }
     e.currentTarget.classList.toggle('is-hovered');
-    e.currentTarget.style.zIndex = 2;
+    // e.currentTarget.style.zIndex = 2;
 }
 
 var paginationPrev = document.querySelector('.js-pagination-prev');
