@@ -138,20 +138,8 @@ h2 {
   border-radius: 50px;
   border: 1px solid #fff;
   color: #fff;
-  margin-top: 1em; }
-  .HeadsUp-button:hover, .HeadsUp-button:active, .HeadsUp-button:focus {
-    outline: none;
-    background: #fff;
-    color: #035D82; }
-    .HeadsUp-button:hover:after, .HeadsUp-button:active:after, .HeadsUp-button:focus:after {
-      content: '';
-      position: absolute;
-      left: 5px;
-      top: 5px;
-      width: calc(100% - 10px);
-      height: calc(100% - 10px);
-      border: 1px solid #035D82;
-      border-radius: 50px; }
+  margin-top: 1em;
+  cursor: pointer; }
 .HeadsUp-input {
   display: block;
   width: 100%;

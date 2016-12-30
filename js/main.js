@@ -18,6 +18,7 @@ var roundCount = null;
 
 function switchPage() {
   var currentPage = document.querySelector('.js-slider');
+  console.log(this.dataset !== undefined);
 
   var direction = this.dataset !== undefined && this.dataset.direction === 'prev' ? -1 : 1;
   currentPageNum += direction;
@@ -55,12 +56,12 @@ function quickPlayMode() {
   // Keep an array of the team names if they were created in competitionMode
   var finalTeamNames = document.querySelectorAll('.js-team-name[name="team_name"]');
   teams = [];
-  // if (finalTeamNames.length > 0) {
-  //   finalTeamNames.forEach(finalTeamName => {
-  //     teams.push(finalTeamName.value);
-  //   });
-  //   console.log(teams);
-  // }
+  if (finalTeamNames.length > 0) {
+    finalTeamNames.forEach(finalTeamName => {
+      teams.push(finalTeamName.value);
+    });
+    console.log(teams);
+  }
 
   showCategories();
 }

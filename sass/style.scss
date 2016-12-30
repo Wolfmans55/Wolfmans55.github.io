@@ -190,23 +190,24 @@ h2 {
     border: 1px solid #fff;
     color: #fff;
     margin-top: 1em;
-    &:hover,
-    &:active,
-    &:focus {
-    	outline: none;
-    	background: #fff;
-			color: $blue_lt;
-			&:after {
-				content: '';
-				position: absolute;
-				left: 5px;
-				top: 5px;
-				width: calc(100% - 10px);
-				height: calc(100% - 10px);
-				border: 1px solid $blue_lt;
-				border-radius: 50px;
-			}
-    }
+    cursor: pointer;
+   //  &:hover,
+   //  &:active,
+   //  &:focus {
+   //  	outline: none;
+   //  	background: #fff;
+			// color: $blue_lt;
+			// &:after {
+			// 	content: '';
+			// 	position: absolute;
+			// 	left: 5px;
+			// 	top: 5px;
+			// 	width: calc(100% - 10px);
+			// 	height: calc(100% - 10px);
+			// 	border: 1px solid $blue_lt;
+			// 	border-radius: 50px;
+			// }
+   //  }
 	}
 	&-input {
 		display: block;
