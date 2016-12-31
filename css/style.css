@@ -1,31 +1,31 @@
 @-webkit-keyframes fadeyo {
   0% {
-    -webkit-transform: rotateY(0deg) translate3d(0, 0, 0);
-    transform: rotateY(0deg) translate3d(0, 0, 0); }
-  99% {
-    -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
-    transform: rotateY(180deg) translate3d(0, 0, 0); } }
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); } }
 @keyframes fadeyo {
   0% {
-    -webkit-transform: rotateY(0deg) translate3d(0, 0, 0);
-    transform: rotateY(0deg) translate3d(0, 0, 0); }
-  99% {
-    -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
-    transform: rotateY(180deg) translate3d(0, 0, 0); } }
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
+  100% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); } }
 @-webkit-keyframes fadeyoReverse {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
-    transform: translate3d(0, 0, 0) rotateY(180deg); }
-  99% {
-    -webkit-transform: translate3d(0, 0, 0) rotateY(0deg);
-    transform: translate3d(0, 0, 0) rotateY(0deg); } }
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg); } }
 @keyframes fadeyoReverse {
   0% {
-    -webkit-transform: translate3d(0, 0, 0) rotateY(180deg);
-    transform: translate3d(0, 0, 0) rotateY(180deg); }
-  99% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg); }
+  100% {
     -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg) rotateY(0deg); } }
+    transform: rotateY(0deg); } }
 .u-clearFix:after {
   clear: both;
   content: '';
@@ -179,13 +179,7 @@ h2 {
     .HeadsUp-card.is-hovered .HeadsUp-card-inner {
       -webkit-animation: fadeyo .3s .5s forwards;
       animation: fadeyo .3s .5s forwards; }
-      .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-front {
-        opacity: 0;
-        transition: opacity 0s .5s; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-back {
-        z-index: 4;
-        -webkit-transform: rotateY(0);
-        transform: rotateY(0);
         -webkit-filter: inherit; }
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-front:before,
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-back:before {
@@ -201,8 +195,6 @@ h2 {
     border-radius: 10px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     position: relative;
     -webkit-animation: fadeyoReverse .3s 0s forwards;
     animation: fadeyoReverse .3s 0s forwards; }
@@ -236,8 +228,8 @@ h2 {
       z-index: 2; }
   .HeadsUp-card-front {
     z-index: 2;
-    -webkit-transform: rotateY(0deg) translate3d(0, 0, 0);
-    transform: rotateY(0deg) translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1; }
     .HeadsUp-card-front-text {
       position: absolute;
@@ -249,6 +241,8 @@ h2 {
   .HeadsUp-card-back {
     -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
     transform: rotateY(180deg) translate3d(0, 0, 0);
+    -webkit-backface-visibility: initial;
+    backface-visibility: initial;
     padding: 30px;
     transition: transform 0s .8s, -webkit-filter 1s linear;
     -webkit-filter: blur(8px); }
