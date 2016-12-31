@@ -73,6 +73,7 @@ h2 {
   position: absolute;
   height: 100%;
   font-size: 16px;
+  transform: translate3d(0, 0, 0);
   transition: transform .5s .2s;
   padding: 1em; }
   .HeadsUp-page:nth-child(1) {
@@ -174,8 +175,6 @@ h2 {
   position: absolute;
   -webkit-perspective: 1000px;
   perspective: 1000px;
-  -webkit-transition: transform .5s .3s;
-  transition: transform .5s .3s;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   overflow: hidden;
