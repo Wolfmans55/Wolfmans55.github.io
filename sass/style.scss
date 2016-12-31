@@ -12,8 +12,8 @@ $white: #fff;
     transform: rotateY(180deg) translate3d(0,0,0);
   }
   100%   {
-    -webkit-transform: rotateY(180deg) translate3d(0,0,0);
-    transform: rotateY(180deg) translate3d(0,0,0);
+    -webkit-transform: rotateY(0deg) translate3d(0,0,0);
+    transform: rotateY(0deg) translate3d(0,0,0);
   }
 }
 @keyframes fadeyo {
@@ -26,8 +26,8 @@ $white: #fff;
     transform: rotateY(180deg) translate3d(0,0,0);
   }
   100%   {
-    -webkit-transform: rotateY(180deg) translate3d(0,0,0);
-    transform: rotateY(180deg) translate3d(0,0,0);
+    -webkit-transform: rotateY(0deg) translate3d(0,0,0);
+    transform: rotateY(0deg) translate3d(0,0,0);
   }
 }
 
@@ -41,8 +41,8 @@ $white: #fff;
     transform: translate3d(0,0,0) rotateY(0deg);
   }
   100%   {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: rotateY(0deg) translate3d(0,0,0);
+    transform: rotateY(0deg) translate3d(0,0,0);
   }
 }
 @keyframes fadeyoReverse {
@@ -52,11 +52,11 @@ $white: #fff;
   }
   99% {
     -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) rotateY(0deg);
   }
   100%   {
     -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    transform: rotateY(0deg) translate3d(0,0,0);
   }
 }
 
