@@ -12,8 +12,8 @@ $white: #fff;
     transform: rotateY(180deg);
   }
   100%   {
-    -webkit-transform: none;
-    transform: none;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
 }
 @keyframes fadeyo {
@@ -26,8 +26,8 @@ $white: #fff;
     transform: rotateY(180deg);
   }
   100%   {
-    -webkit-transform: none;
-    transform: none;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
 }
 
@@ -242,7 +242,7 @@ h2 {
 		  	animation: fadeyo .3s .5s forwards;
 		  	.HeadsUp-card-front {
 			    opacity: 0;
-			    // transition: opacity 0s .5s;
+			    transition: opacity 0s .5s;
 			  }
 			  .HeadsUp-card-back {
 			    z-index: 4;
@@ -277,8 +277,6 @@ h2 {
 			// padding: 1em;
 			-webkit-transform-style: preserve-3d;
 			transform-style: preserve-3d;
-			-webkit-transform: translate3d(0, 0, 0);
-	    transform: translate3d(0, 0, 0);
     	position: relative;
     	-webkit-animation: fadeyoReverse .3s 0s forwards;
     	animation: fadeyoReverse .3s 0s forwards;
@@ -303,8 +301,6 @@ h2 {
 		    box-sizing: border-box;
 		    border-radius: 5px;
 		    background: $blue_dark;
-		    -webkit-transform: translate3d(0, 0, 0);
-	    transform: translate3d(0, 0, 0);
 		    z-index: 2; // so words sit on top
 		  }
 		  &:before {
@@ -314,8 +310,6 @@ h2 {
 		    bottom: 0;
 		    left: 0;
 		    right: 0;
-		    -webkit-transform: translate3d(0, 0, 0);
-	    transform: translate3d(0, 0, 0);
 		    // border: 10px solid #0B0A09;
 		    z-index: 2; // so words sit on top
 		  }
@@ -325,7 +319,6 @@ h2 {
 			-webkit-transform: translate3d(0, 0, 0);
 	    transform: translate3d(0, 0, 0);
 	    opacity: 1;
-	    background:green;
 	    &-text {
 	    	position: absolute;
 	    	top: 50%;
@@ -341,9 +334,8 @@ h2 {
 			-webkit-backface-visibility: hidden;
 		  backface-visibility: hidden;
 		  padding: 30px;
-		  transition: transform 0s .8s;
-		  background:red;
-		  // -webkit-filter: blur(8px);
+		  transition: transform 0s .8s, -webkit-filter 1s linear;
+		  -webkit-filter: blur(8px);
 		  &-text {
 	    	position: relative;
 	    	z-index: 3;
