@@ -36,17 +36,15 @@
 
 html,
 body {
+  min-height: 100%;
   overflow: hidden; }
-
-html {
-  height: 100%; }
 
 body {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to bottom, #000822 0%, #035d82 100%);
   padding: 0;
   color: #fff;
-  min-height: 100%; }
+  overflow: hidden; }
 
 body,
 h2,
@@ -57,13 +55,10 @@ h2 {
   font-weight: 600; }
 
 .HeadsUp-slider {
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 0; }
+  overflow: hidden; }
 .HeadsUp-page {
-  display: inline-block;
-  vertical-align: top;
   width: 100%;
+  position: absolute;
   height: 100%;
   font-size: 16px;
   transform: translate3d(0, 0, 0);
@@ -155,8 +150,6 @@ h2 {
       height: calc(100% - 10px);
       border: 1px solid #035D82;
       border-radius: 50px; }
-  .HeadsUp-button--play {
-    padding: 5px 25px; }
 .HeadsUp-input {
   display: block;
   width: 100%;
@@ -166,10 +159,8 @@ h2 {
   border: 0;
   -webkit-appearance: none; }
 .HeadsUp-card {
-  font-size: 16px;
-  width: 50%;
-  display: inline-block;
-  position: relative;
+  width: calc(50% - 1em);
+  position: absolute;
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-transition: transform .5s .3s;
@@ -194,12 +185,10 @@ h2 {
       .HeadsUp-card.is-hovered .HeadsUp-card-inner .HeadsUp-card-back:before {
         border-color: transparent; }
   .HeadsUp-card-body {
-    font-size: 0;
     overflow: auto;
     height: calc(100% - 8.2em);
     padding-bottom: 2em;
-    box-sizing: border-box;
-    white-space: initial; }
+    box-sizing: border-box; }
   .HeadsUp-card-inner, .HeadsUp-card-front, .HeadsUp-card-back {
     height: 200px; }
   .HeadsUp-card-inner {
@@ -305,5 +294,61 @@ h2 {
     background: #fff; }
   .HeadsUp-pagination--4 .HeadsUp-pagination-item--4 {
     background: #fff; }
+
+.HeadsUp-card:nth-child(1) {
+  -webkit-transform: translate3d(0, 0%, 0);
+  transform: translate3d(0, 0%, 0); }
+
+.HeadsUp-card:nth-child(2) {
+  -webkit-transform: translate3d(100%, 0%, 0);
+  transform: translate3d(100%, 0%, 0); }
+
+.HeadsUp-card:nth-child(3) {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0); }
+
+.HeadsUp-card:nth-child(4) {
+  -webkit-transform: translate3d(100%, 100%, 0);
+  transform: translate3d(100%, 100%, 0); }
+
+.HeadsUp-card:nth-child(5) {
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0); }
+
+.HeadsUp-card:nth-child(6) {
+  -webkit-transform: translate3d(100%, 200%, 0);
+  transform: translate3d(100%, 200%, 0); }
+
+.HeadsUp-card:nth-child(7) {
+  -webkit-transform: translate3d(0, 300%, 0);
+  transform: translate3d(0, 300%, 0); }
+
+.HeadsUp-card:nth-child(8) {
+  -webkit-transform: translate3d(100%, 300%, 0);
+  transform: translate3d(100%, 300%, 0); }
+
+.HeadsUp-card:nth-child(9) {
+  -webkit-transform: translate3d(0, 400%, 0);
+  transform: translate3d(0, 400%, 0); }
+
+.HeadsUp-card:nth-child(10) {
+  -webkit-transform: translate3d(100%, 400%, 0);
+  transform: translate3d(100%, 400%, 0); }
+
+.HeadsUp-card:nth-child(11) {
+  -webkit-transform: translate3d(0, 500%, 0);
+  transform: translate3d(0, 500%, 0); }
+
+.HeadsUp-card:nth-child(12) {
+  -webkit-transform: translate3d(100%, 500%, 0);
+  transform: translate3d(100%, 500%, 0); }
+
+.HeadsUp-card:nth-child(13) {
+  -webkit-transform: translate3d(0, 600%, 0);
+  transform: translate3d(0, 600%, 0); }
+
+.HeadsUp-card:nth-child(14) {
+  -webkit-transform: translate3d(100%, 600%, 0);
+  transform: translate3d(100%, 600%, 0); }
 
 /*# sourceMappingURL=style.css.map */
