@@ -54,15 +54,13 @@ p {
 h2 {
   font-weight: 600; }
 
-.HeadsUp-slider {
-  overflow: hidden; }
 .HeadsUp-page {
   width: 100%;
   position: absolute;
   height: 100%;
   font-size: 16px;
   transform: translate3d(0, 0, 0);
-  transition: transform .5s .2s;
+  transition: transform .4s .2s;
   padding: 1em; }
   .HeadsUp-page:nth-child(1) {
     left: 0; }
@@ -150,6 +148,8 @@ h2 {
       height: calc(100% - 10px);
       border: 1px solid #035D82;
       border-radius: 50px; }
+  .HeadsUp-button--play {
+    padding: 5px 25px; }
 .HeadsUp-input {
   display: block;
   width: 100%;

@@ -100,33 +100,33 @@ function showCategories() {
 }
 
 function selectACategory(e) {
-    var cards = document.querySelectorAll('.js-card');
-    cards.forEach(card => {
-      if (card !== event.currentTarget) {
-        card.classList.remove('is-hovered');
-        card.removeAttribute('style');
-      }
-    })
-
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
-    var windowTop = document.querySelector('body').scrollTop;
-    var cardWidth = windowWidth / 2;
-    var cardHeight = 200;
-    const bodyPadding = 8;
-    var x = (windowWidth / 2) - (cardWidth / 2) - bodyPadding;
-    var y = (windowHeight / 2) + windowTop - (cardHeight / 2) - 100;
-
-    // alert('window width:' + windowWidth + ' window height:' + windowHeight + ' window top:' + windowTop + ' card width:' + cardWidth + ' card height:' + cardHeight);
-
-    if (!e.currentTarget.classList.contains('is-hovered')) {
-      // e.currentTarget.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(2)';
-      e.currentTarget.style.cssText = '-webkit-transform: translate3d(' + x + 'px, ' + y + 'px, 0) scale(2);';
-    } else {
-      e.currentTarget.removeAttribute('style');
+  var cards = document.querySelectorAll('.js-card');
+  cards.forEach(card => {
+    if (card !== event.currentTarget) {
+      card.classList.remove('is-hovered');
+      card.removeAttribute('style');
     }
-    e.currentTarget.classList.toggle('is-hovered');
-    // e.currentTarget.style.zIndex = 2;
+  })
+
+  var windowWidth = window.innerWidth;
+  var windowHeight = window.innerHeight;
+  var windowTop = document.querySelector('body').scrollTop;
+  var cardWidth = windowWidth / 2;
+  var cardHeight = 200;
+  const bodyPadding = 8;
+  var x = (windowWidth / 2) - (cardWidth / 2) - bodyPadding;
+  var y = (windowHeight / 2) + windowTop - (cardHeight / 2) - 100;
+
+  // alert('window width:' + windowWidth + ' window height:' + windowHeight + ' window top:' + windowTop + ' card width:' + cardWidth + ' card height:' + cardHeight);
+
+  if (!e.currentTarget.classList.contains('is-hovered')) {
+    // e.currentTarget.style.transform = 'translate3d(' + x + 'px, ' + y + 'px, 0) scale(2)';
+    e.currentTarget.style.cssText = '-webkit-transform: translate3d(' + x + 'px, ' + y + 'px, 0) scale(2);';
+  } else {
+    e.currentTarget.removeAttribute('style');
+  }
+  e.currentTarget.classList.toggle('is-hovered');
+  // e.currentTarget.style.zIndex = 2;
 }
 
 var paginationPrev = document.querySelector('.js-pagination-prev');
