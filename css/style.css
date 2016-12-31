@@ -253,7 +253,8 @@ h2 {
     z-index: 2;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    opacity: 1; }
+    opacity: 1;
+    background: green; }
     .HeadsUp-card-front-text {
       position: absolute;
       top: 50%;
@@ -267,7 +268,8 @@ h2 {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     padding: 30px;
-    transition: transform 0s .8s; }
+    transition: transform 0s .8s;
+    background: red; }
     .HeadsUp-card-back-text {
       position: relative;
       z-index: 3;

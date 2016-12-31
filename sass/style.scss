@@ -325,6 +325,7 @@ h2 {
 			-webkit-transform: translate3d(0, 0, 0);
 	    transform: translate3d(0, 0, 0);
 	    opacity: 1;
+	    background:green;
 	    &-text {
 	    	position: absolute;
 	    	top: 50%;
@@ -341,6 +342,7 @@ h2 {
 		  backface-visibility: hidden;
 		  padding: 30px;
 		  transition: transform 0s .8s;
+		  background:red;
 		  // -webkit-filter: blur(8px);
 		  &-text {
 	    	position: relative;
