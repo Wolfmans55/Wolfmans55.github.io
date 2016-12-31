@@ -277,6 +277,8 @@ h2 {
 			// padding: 1em;
 			-webkit-transform-style: preserve-3d;
 			transform-style: preserve-3d;
+			-webkit-transform: translate3d(0, 0, 0);
+	    transform: translate3d(0, 0, 0);
     	position: relative;
     	-webkit-animation: fadeyoReverse .3s 0s forwards;
     	animation: fadeyoReverse .3s 0s forwards;
