@@ -213,6 +213,8 @@ h2 {
     border-radius: 10px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     position: relative;
     -webkit-animation: fadeyoReverse .3s 0s forwards;
     animation: fadeyoReverse .3s 0s forwards; }
@@ -259,8 +261,6 @@ h2 {
   .HeadsUp-card-back {
     -webkit-transform: rotateY(180deg) translate3d(0, 0, 0);
     transform: rotateY(180deg) translate3d(0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     padding: 30px;
     transition: transform 0s .8s, -webkit-filter 1s linear;
     -webkit-filter: blur(8px); }
