@@ -334,8 +334,8 @@ h2 {
 			-webkit-backface-visibility: hidden;
 		  backface-visibility: hidden;
 		  padding: 30px;
-		  transition: transform 0s .8s, -webkit-filter .8s linear;
-		  -webkit-filter: blur(8px);
+		  transition: transform 0s .8s;
+		  // -webkit-filter: blur(8px);
 		  &-text {
 	    	position: relative;
 	    	z-index: 3;
