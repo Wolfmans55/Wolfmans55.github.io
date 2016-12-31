@@ -261,7 +261,7 @@ h2 {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     padding: 30px;
-    transition: transform 0s .8s, -webkit-filter 1s linear;
+    transition: transform 0s .8s, -webkit-filter .8s linear;
     -webkit-filter: blur(8px); }
     .HeadsUp-card-back-text {
       position: relative;
